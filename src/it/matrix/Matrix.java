@@ -21,8 +21,8 @@ public class Matrix {
      * @param rows Numero di righe
      * @param columns Numero di colonne
      * @param random {@code true} Se e solo se, la matrice deve essere riempita con
-     *               elementi generati randomicamente in un range di defaut;
-     *              Altrimenti {@code false} per generare una matrice vuota.
+     *               elementi generati randomicamente in un range di default;
+     *               Altrimenti {@code false} per generare una matrice vuota.
      */
     public Matrix(int rows, int columns, boolean random) {
         if (random) matrix = Matrix.random(rows, columns);
