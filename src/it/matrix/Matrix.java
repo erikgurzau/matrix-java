@@ -237,10 +237,9 @@ public class Matrix {
             throw new RuntimeException("Illegal row index: " + rowFix + "out of bounds 0 - " + getNumRows());
         if (outOfRange(columnFix, getNumRows()))
             throw new RuntimeException("Illegal column index: " + columnFix + "out of bounds 0 - " + getNumColumns());
-        if (m.getNumRows() < 2)
-            throw new RuntimeException("Illegal submatrix: you cannot extract a submatrix from a 1x" + m.getNumColumns() + " matrix");
-        if (m.getNumColumns() < 2)
-            throw new RuntimeException("Illegal submatrix: you cannot extract a submatrix from a " + m.getNumRows() + "x1 matrix");
+        if (m.getNumRows() < 2 && m.getNumColumns() < 2)
+            throw new RuntimeException("Illegal submatrix: you cannot extract a submatrix from a 1x1 matrix");
+
 
         int k = 0, max = Math.min(m.getNumRows(), m.getNumColumns());
         double[] array = new double[(int) Math.pow(max - 1, 2)];
