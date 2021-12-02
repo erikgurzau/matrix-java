@@ -14,22 +14,22 @@ public class Main {
         try {
             System.out.println("A Inversa          \t: " + m.inverse().toLineString());
         } catch (MatrixException e) {
-            System.out.println("A Inversa          \t: Il determinante deve essere diverso da 0" );
+            System.out.println("A Inversa          \t: " + e.getMessage());
         }
         try {
             System.out.println("A Cofattori        \t: " + m.cofactors(m).toLineString());
         } catch (MatrixException e) {
-            System.out.println("A Cofattori        \t: La matrice deve essere quadrata");
+            System.out.println("A Cofattori        \t: " + e.getMessage());
         }
         try {
             System.out.println("A * A Inversa      \t: " + m.multiply(m.inverse()).toLineString());
         } catch (MatrixException e) {
-            System.out.println("A * A Inversa      \t: Il determinante deve essere diverso da 0" );
+            System.out.println("A * A Inversa      \t: " + e.getMessage() );
         }
         try {
             System.out.println("Determinante       \t: " + m.determinant());
         } catch (MatrixException e) {
-            System.out.println("Determinante       \t: La matrice deve essere quadrata");
+            System.out.println("Determinante       \t: " + e.getMessage());
         }
 
         System.out.println("Scala              \t: " + m.isScale());

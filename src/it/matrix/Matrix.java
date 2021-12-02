@@ -76,7 +76,7 @@ public class Matrix {
      *         Altrimenti {@code false}.
      */
     public boolean outOfRange(int index, int N){
-        return index < 0 || index > N - 1;
+        return index < 0 || index > N;
     }
 
     /**
@@ -192,8 +192,7 @@ public class Matrix {
         else {
             //Laplace method
             for (int i = 0; i < m.getNumRows();i++)
-                if (m.getNumRows() > 2)
-                    det += Math.pow(-1, 2 + i) * m.at(0,i) * determinant(submatrix(m, 0, i));
+                det += Math.pow(-1, 2 + i) * m.at(0,i) * determinant(submatrix(m, 0, i));
             return det;
         }
     }
@@ -477,7 +476,10 @@ public class Matrix {
      */
     public Matrix inverse() throws MatrixException {
         double det = determinant();
-        if (det == 0) throw new MatrixException("Illegal determinant: must be not equals to 0");
+        if (!isSquare())
+            throw new MatrixException("Illegal matrix type: must be a square matrix");
+        if (det == 0)
+            throw new MatrixException("Illegal determinant: must be not equals to 0");
 
         Matrix complAlg = cofactors(transposed());
         double[][] matrix = new double [getNumRows()][getNumColumns()];
@@ -747,7 +749,7 @@ public class Matrix {
      */
     public static double[] minus(double[] elements1, double[] elements2){
         if (elements1.length != elements2.length)
-            throw new RuntimeException("ArraysLengthNotEquals");
+            throw new RuntimeException("Illegal array length: the two lengths must be equals");
         double[] array = new double[elements1.length];
         for (int i = 0; i < array.length; i++) array[i] = elements1[i] - elements2[i];
         return array;
