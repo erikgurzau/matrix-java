@@ -285,6 +285,17 @@ public class Matrix {
     }
 
     /**
+     * Controlla se questa eun'altra matrice sono dello stesso ordine,
+     * ovvero hanno lo stesso numero di righe e colonne
+     * @param other Matrice da confrontare
+     * @return {@code true} Se e solo se le due matrici hanno lo stesso numero di righe e colonne;
+     *         Altrimenti {@code false}.
+     */
+    public boolean hasEqualsOrder(Matrix other){
+        return hasEqualsRows(other) && hasEqualsColumns(other);
+    }
+
+    /**
      * Riduce a scala questa matrice attraverso l'utilizzo del metodo di eliminazione di Gauss
      * @return La matrice in forma scala
      */
@@ -396,10 +407,8 @@ public class Matrix {
      * @return Matrice somma
      */
     public Matrix sum(Matrix other){
-        if (!hasEqualsRows(other))
-            throw new RuntimeException("Illegal matrices length: the number of rows are not equals " + this.getNumRows() + " != " + other.getNumRows());
-        if (!hasEqualsColumns(other))
-            throw new RuntimeException("Illegal matrices length: the number of columns are not equals " + this.getNumColumns() + " != " + other.getNumColumns());
+        if (!hasEqualsOrder(other))
+            throw new RuntimeException("Illegal matrices length: the matricies aren't the same type");
 
         double[][] matrix = new double[this.getNumRows()][this.getNumColumns()];
         for (int i = 0; i < this.getNumRows(); i++)
@@ -444,6 +453,8 @@ public class Matrix {
      * @return Matrice differenza
      */
     public Matrix diff(Matrix other){
+        if (!hasEqualsOrder(other))
+            throw new RuntimeException("Illegal matrices length: the matricies aren't the same type");
         double[][] matrix = new double[this.getNumRows()][this.getNumColumns()];
         for (int i = 0; i < this.getNumRows(); i++)
             for (int j = 0; j < this.getNumColumns(); j++)
