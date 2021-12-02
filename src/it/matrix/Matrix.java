@@ -608,8 +608,8 @@ public class Matrix {
         if (!isSquare()) return false;
         for (int i = 0; i < getNumRows(); i++)
             for (int j = 0; j < getNumColumns(); j++)
-                if (i != j && at(i, j) != 0) return false;
-                else if (i == j && at(i,j) != 0) return false;
+                if (i == j && at(i, j) == 0) return false;
+                else if (i != j && at(i, j) != 0) return false;
 
         return true;
     }
