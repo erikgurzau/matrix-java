@@ -530,7 +530,7 @@ public class Matrix {
      * Prodotto righe per colonne : moliplica questa matrice MxN con un'altra,
      * se e solo se quest'ultima ha dimensione NxK.
      * Ogni elemento del prodotto è ottenuto mendiante Aik * Bkj
-     * @param other Matrice M * K da moltipliacre a questa
+     * @param other Matrice NxK da moltipliacre a questa
      * @return La matrice risultante dal prodotto righe per colonne
      */
     public Matrix multiply(Matrix other){
