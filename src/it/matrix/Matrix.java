@@ -309,6 +309,7 @@ public class Matrix {
                 pivotRow = i;
                 pivotColumn = m.getPivotColum(pivotRow);
 
+                //Se pivotColumn == m.getNumColumns() allora riga nulla senza pivot
                 if (pivotColumn < m.getNumColumns()){
                     for (int k = i + 1; k < m.getNumRows(); k++) {
                         if (m.at(k, pivotColumn) != 0) {
@@ -321,7 +322,6 @@ public class Matrix {
                 }
             }
             rowstart++;
-            //if (rowstart >= m.getNumRows()) rowstart = 0;
         }
         return m;
     }
