@@ -106,8 +106,8 @@ public class Matrix {
     /**
      * Rimpiazza un elemento in una posizione specifica della matrice con un altro elemento
      * @param value Elemento da inserire nella matrice
-     * @param row Numero di riga dell'elemento da rimpiazzare
-     * @param column Numero di colonna dell'elemento da rimpiazzare
+     * @param row Indice della riga dell'elemento da rimpiazzare
+     * @param column Indice della colonna dell'elemento da rimpiazzare
      */
     public void set(double value, int row, int column) {
         if (outOfRange(row, getNumRows()))
