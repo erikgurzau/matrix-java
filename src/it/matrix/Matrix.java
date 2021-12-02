@@ -492,11 +492,11 @@ public class Matrix {
         if (det == 0)
             throw new MatrixException("Illegal determinant: must be not equals to 0");
 
-        Matrix complAlg = cofactors(transposed());
+        Matrix mCofactors = cofactors(transposed());
         double[][] matrix = new double [getNumRows()][getNumColumns()];
         for (int i = 0; i < getNumRows(); i++){
             for (int j = 0; j < getNumColumns(); j++){
-                matrix[i][j] = complAlg.at(j,i) / det;
+                matrix[i][j] = mCofactors.at(j,i) / det;
             }
         }
         return new Matrix(matrix);
