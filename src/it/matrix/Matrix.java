@@ -211,7 +211,7 @@ public class Matrix {
     }
 
     /**
-     * Ottiene una sottomatrice N-1 * N-1 a partire da una matrice N * N, fissando la prima riga e la prima colonna
+     * Ottiene una sottomatrice (N-1)x(N-1) a partire da una matrice NxN, fissando la prima riga e la prima colonna
      * @param m Matrice di partenza da cui ricavare la sottomatrice
      * @return Oggetto matrice corrispondete alla sottomatrice
      */
@@ -220,11 +220,11 @@ public class Matrix {
     }
 
     /**
-     * Ottiene una sottomatrice N-1 * N-1 a partire da una matrice N * N, fissando una riga e una colonna
+     * Ottiene una sottomatrice (N-1)x(N-1) a partire da una matrice NxN, fissando una riga e una colonna
      * @param m Matrice di partenza da cui ricavare la sottomatrice
      * @param rowFix Indice della riga da non rimuovere
      * @param columnFix Indice della colonna da non rimuovere
-     * @return Sottomatrice N-1 * N-1
+     * @return Sottomatrice (N-1)x(N-1)
      */
     public Matrix submatrix(Matrix m, int rowFix, int columnFix){
         if (outOfRange(rowFix, getNumRows()))
@@ -527,8 +527,8 @@ public class Matrix {
     }
 
     /**
-     * Prodotto righe per colonne : moliplica questa matrice M * N con un'altra,
-     * se e solo se quest'ultima ha dimensione N * K.
+     * Prodotto righe per colonne : moliplica questa matrice MxN con un'altra,
+     * se e solo se quest'ultima ha dimensione NxK.
      * Ogni elemento del prodotto è ottenuto mendiante Aik * Bkj
      * @param other Matrice M * K da moltipliacre a questa
      * @return La matrice risultante dal prodotto righe per colonne
