@@ -506,9 +506,9 @@ public class Matrix {
      * Calcola la matrice dei complementi algebrici (o cofattori) degli elementi
      * di una matrice. Un cofattore è identificato dalla formula -(1)^i+j * det(Bij),
      * ovvero dal determinante della sottomatrice Bij e dal simbolo '+' se la somma
-     * degli indici i e j sono pari, '-' invece se è dispari.
+     * degli indici i e j è pari, '-' invece se è dispari.
      * Il calcolo dei complementi algebrici di una matrice serve per poter calcolare
-     * la matrice inversa di una matrice quadrata con determinante > 0
+     * la matrice inversa di una matrice quadrata con determinante diverso da 0
      * @param m Matrice di partenza
      * @return Matrice contenente i cofattori della matrice di partenza
      * @throws MatrixException Se la matrice non è quadrata
