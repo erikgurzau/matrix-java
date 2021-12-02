@@ -198,10 +198,10 @@ public class Matrix {
     }
 
     /**
-     * Calcolo del determinante attraverso il metodo di sarrus per matrici N * N con N = 3
+     * Calcolo del determinante attraverso il metodo di sarrus per matrici 3x3
      * @param m Matrice su cui bisogna calcolare il determinanate
      * @return Il valore del determinante
-     * @throws MatrixException Se la matrice non è quadrata oppure la matrice non è N * N con N = 3
+     * @throws MatrixException Se la matrice non è quadrata oppure la matrice non è 3x3
      */
     private double sarrus(Matrix m) throws MatrixException {
         if (!m.isSquare()) throw new MatrixException("Illegal matrix type: must be a square matrix");
