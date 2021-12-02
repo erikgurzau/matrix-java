@@ -14,7 +14,7 @@ public class Matrix {
     /**
      * Valore massimo degli elementi generati in modo randomico
      */
-    public static final int MAX_RAND_VALUE = 2;
+    public static final int MAX_RAND_VALUE = 4;
 
     /**
      * Costruttore di una matrice generata randomicamente con una dimensione determinata
@@ -313,7 +313,7 @@ public class Matrix {
         int pivotRow, pivotColumn, rowstart = 0;
 
         m.ordPivots();
-        while (!m.isScale() && !m.pivotsAreScaled()) {
+        while (!m.isScale()) {
             for (int i = rowstart; i < m.getNumRows() - 1; i++){
                 m.ordPivots();
 
@@ -651,6 +651,17 @@ public class Matrix {
      *          Altrimenti {@code false}.
      */
     public boolean isScale(){
+        return zerosUnderPivots() || pivotsAreScaled();
+    }
+
+    /**
+     * Controlla se sotto ogni pivot ci sono solo zeri
+     * @return {@code true} Se e solo se, identificato il pivot nella riga
+     *          i-esima e colonna j-esima, a partire dall'elemento i+1j,
+     *          tutti gli elementi nella stessa colonna sono pari a 0;
+     *          Altrimenti {@code false} se c'è anche solo un numero diverso da 0.
+     */
+    private boolean zerosUnderPivots(){
         for (int i = 0; i < getNumRows(); i++){
             for (int j = 0; j < getNumColumns(); j++){
                 if (at(i,j) != 0){
@@ -683,7 +694,7 @@ public class Matrix {
     }
 
     /**
-     * Ritorna una stringa che rappresenta graficamente la matrice, contiene la rappresentazione String di ogni elemento
+     * Ritorna una stringa che rappresenta graficamente in forma tabellare la matrice, contiene la rappresentazione String di ogni elemento
      * @return Rappresentazione String della matrice
      */
     public String toString(){
