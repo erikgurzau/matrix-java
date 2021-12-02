@@ -205,7 +205,7 @@ public class Matrix {
      */
     private double sarrus(Matrix m) throws MatrixException {
         if (!m.isSquare()) throw new MatrixException("Illegal matrix type: must be a square matrix");
-        if (m.getNumRows() != 3) throw new MatrixException("Illegal Sarrus method: the matrix must be N * N with N = 3");
+        if (m.getNumRows() != 3) throw new MatrixException("Illegal Sarrus method: the matrix must be 3x3");
         return (m.at(0,0) * m.at(1,1) * m.at(2,2) + m.at(0,1) * m.at(1,2) * m.at(2,0) + m.at(0,2) * m.at(1,0) * m.at(2,1))
                 - (m.at(0,2) * m.at(1,1) * m.at(2,0) + m.at(0,0) * m.at(1,2) * m.at(2,1) + m.at(0,1) * m.at(1,0) * m.at(2,2));
     }
