@@ -710,7 +710,7 @@ public class Matrix {
 
 
     /**
-     * Genera in modo randomico una matrice di N * M elementi con valori nell'intervallo MIN_RAND_VALUE : MAX_RAND_VALUE
+     * Genera in modo randomico una matrice di NxM elementi con valori nell'intervallo (MIN_RAND_VALUE =< x && x < MAX_RAND_VALUE)
      * @param N Numero di righe
      * @param M Numero di colonne
      * @return Matrice di double generata randomicamente
@@ -725,7 +725,7 @@ public class Matrix {
     }
 
     /**
-     * Genera in modo randomico un oggetto Matrice di N * M elementi con valori nell'intervallo MIN_RAND_VALUE : MAX_RAND_VALUE
+     * Genera in modo randomico un oggetto Matrice di NxM elementi con valori nell'intervallo (MIN_RAND_VALUE =< x && x < MAX_RAND_VALUE)
      * @param N Numero di righe
      * @param M Numero di colonne
      * @return Oggetto Matrix generato in modo randomico
@@ -735,7 +735,7 @@ public class Matrix {
     }
 
     /**
-     * Trasforma un vettore di lunghezza N, in una matrice √N * √N
+     * Trasforma un vettore di lunghezza N, in una matrice √N x √N
      * @param array Vettore da convertire in matrice
      * @return Matrice corrispondente alla conversione del vettore
      */
