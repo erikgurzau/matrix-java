@@ -6,7 +6,7 @@ public class Matrix {
     /**
      * Matrice
      */
-    private final double[][] matrix;
+    private double[][] matrix;
     /**
      * Valore minimo degli elementi generati in modo randomico
      */
@@ -673,6 +673,15 @@ public class Matrix {
             }
         }
         return true;
+    }
+
+    /**
+     * Ripopola la matrice con elementi identificabili nell'intervallo (MIN_RAND_VALUE =< x && x < MAX_RAND_VALUE)
+     * @return Questa matrice ripopolata in modo randomico
+     */
+    public Matrix random(){
+        matrix = Matrix.random(getNumRows(), getNumColumns());
+        return this;
     }
 
     /**
