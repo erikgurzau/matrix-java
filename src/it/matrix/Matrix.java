@@ -61,7 +61,7 @@ public class Matrix {
      * @param row    Indice della riga
      * @param column Indice della colonna
      * @return {@code true} Se e solo se, gli indice della riga e colonna
-     *         sono dentro al range 0 : N-1;
+     *         sono dentro al range (index < 0 || index > N - 1);
      *         Altrimenti {@code false}.
      */
     public boolean outOfMatrixBounds(Matrix m, int row, int column) {
