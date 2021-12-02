@@ -76,7 +76,7 @@ public class Matrix {
      *         Altrimenti {@code false}.
      */
     public boolean outOfRange(int index, int N){
-        return index < 0 || index > N;
+        return index < 0 || index > N - 1;
     }
 
     /**
