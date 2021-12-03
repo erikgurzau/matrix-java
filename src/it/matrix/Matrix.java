@@ -217,7 +217,7 @@ public class Matrix {
     }
 
     /**
-     * Ottiene una sottomatrice (N-1)x(N-1) a partire da una matrice NxN, fissando la prima riga e la prima colonna
+     * Ottiene una sottomatrice (N-1)x(N-1) a partire da una matrice NxN, eliminando la prima riga e la prima colonna
      * @param m Matrice di partenza da cui ricavare la sottomatrice
      * @return Oggetto matrice corrispondete alla sottomatrice
      */
@@ -226,7 +226,7 @@ public class Matrix {
     }
 
     /**
-     * Ottiene una sottomatrice (N-1)x(N-1) a partire da una matrice NxN, fissando eliminando una riga e una colonna
+     * Ottiene una sottomatrice (N-1)x(N-1) a partire da una matrice NxN, eliminando una riga e una colonna
      * @param m Matrice di partenza da cui ricavare la sottomatrice
      * @param rowFix Indice della riga da rimuovere
      * @param columnFix Indice della colonna da rimuovere
@@ -315,15 +315,14 @@ public class Matrix {
      */
     private Matrix scale(Matrix m){
         double[] a, b, ris;
-        int pivotRow, pivotColumn, rowstart = 0;
+        int pivotColumn, rowstart = 0;
 
         m.ordPivots();
         while (!m.isScale()) {
             for (int i = rowstart; i < m.getNumRows() - 1; i++){
                 m.ordPivots();
 
-                pivotRow = i;
-                pivotColumn = m.getPivotColum(pivotRow);
+                pivotColumn = m.getPivotColum(i);
 
                 //Se pivotColumn == m.getNumColumns() allora riga nulla senza pivot
                 if (pivotColumn < m.getNumColumns()){
