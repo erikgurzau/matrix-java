@@ -226,10 +226,10 @@ public class Matrix {
     }
 
     /**
-     * Ottiene una sottomatrice (N-1)x(N-1) a partire da una matrice NxN, fissando una riga e una colonna
+     * Ottiene una sottomatrice (N-1)x(N-1) a partire da una matrice NxN, fissando eliminando una riga e una colonna
      * @param m Matrice di partenza da cui ricavare la sottomatrice
-     * @param rowFix Indice della riga da non rimuovere
-     * @param columnFix Indice della colonna da non rimuovere
+     * @param rowFix Indice della riga da rimuovere
+     * @param columnFix Indice della colonna da rimuovere
      * @return Sottomatrice (N-1)x(N-1)
      */
     public Matrix submatrix(Matrix m, int rowFix, int columnFix){
