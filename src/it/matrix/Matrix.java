@@ -4,7 +4,7 @@ import java.util.*;
 /**
  * Classe che gestisce una matrice
  * @author Erik Gurzau
- * @version 1.0.0
+ * @version 1.2.0
  * @see <a href="www.linkedin.com/in/erikgurzau">Linkedin</a>
  * @see <a mailto="gurzau10@gmail.com">Email</a>
  */
