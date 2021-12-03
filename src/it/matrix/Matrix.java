@@ -345,7 +345,7 @@ public class Matrix {
      * Cerca il pivot in una riga specifica della matrice, ritorna l'indice della colonna
      * del primo elemento non nullo, altrimenti se la riga è nulla (tutti gli elementi sono
      * pari a 0) ritorna il numero di colonne totali.
-     * Ciò rappresenta la posizione o il "peso" dell'indice della colonna del pivot nell'algoritmo di ordinamento
+     * Ciò rappresenta la posizione o il "peso" della colonna del pivot nell'algoritmo di ordinamento
      * @param row Indice della riga in cui cercare il pivot
      * @return Ritorna l'indice della colonna del pivot nella riga specificata
      */
