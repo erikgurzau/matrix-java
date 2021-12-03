@@ -324,7 +324,6 @@ public class Matrix {
      * @return Il rango della matrice
      */
     public int rank(){
-        if (isNull()) return 0;
         return scale().countPivots();
     }
 
