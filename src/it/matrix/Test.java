@@ -5,7 +5,7 @@ public class Test {
     public static void main(String[] args) {
         double[][] matrix = {{1,2,1,0},{2,1,-1,3},{1,1,0,1},{-2,1,3,-5}};
         Matrix m = new Matrix(matrix);
-        //m = new Matrix(4,3, true);
+        m = new Matrix(4,3, true);
 
 
         System.out.println();
