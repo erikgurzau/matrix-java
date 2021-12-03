@@ -300,6 +300,36 @@ public class Matrix {
         return hasEqualsRows(other) && hasEqualsColumns(other);
     }
 
+
+    /**
+     * Conta i pivot in questa matrice. Un pivot è un'elemento della matrice
+     * ed è definito tale se nella riga i-esima è il primo elemento non nullo
+     * @return Il numero totale di pivot
+     */
+    private int countPivots(){
+        int count = 0;
+        for (int i = 0; i < getNumRows(); i++)
+            for (int j = 0; j < getNumColumns(); j++)
+                if (at(i,j) != 0){
+                    count++;
+                    break;
+                }
+        return count;
+    }
+
+
+    /**
+     * Metodo per calcolare il rango di questa matrice attraverso
+     * l'algoritmo di eliminazione gaussiana
+     * @return Il rango della matrice
+     */
+    public int rank(){
+        if (isNull()) return 0;
+        return scale().countPivots();
+    }
+
+
+
     /**
      * Riduce a scala questa matrice attraverso l'utilizzo del metodo di eliminazione di Gauss
      * @return La matrice in forma scala

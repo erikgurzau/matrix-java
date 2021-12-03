@@ -3,9 +3,9 @@ import it.matrix.exception.MatrixException;
 
 public class Test {
     public static void main(String[] args) {
-        double[][] matrix = {{1,0,0},{0,1,0},{0,0,0}};
+        double[][] matrix = {{1,2,1,0},{2,1,-1,3},{1,1,0,1},{-2,1,3,-5}};
         Matrix m = new Matrix(matrix);
-        m = new Matrix(3,3, true);
+        //m = new Matrix(4,3, true);
 
 
         System.out.println();
@@ -26,6 +26,7 @@ public class Test {
         } catch (MatrixException e) {
             System.out.println("A * A Inversa      \t: " + e.getMessage() );
         }
+        System.out.println("Rango              \t: " + m.rank());
         try {
             System.out.println("Determinante       \t: " + m.determinant());
         } catch (MatrixException e) {
