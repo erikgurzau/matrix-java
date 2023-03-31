@@ -20,14 +20,14 @@ Per creare una matrice, è possibile utilizzare il costruttore `Matrix` e passar
 
 ```java
 Matrix matrix = new Matrix(3, 3);
-'''
+```
 
 È anche possibile inizializzare una matrice con valori predefiniti utilizzando il costruttore `Matrix` che accetta un array bidimensionale:
 
 ```java
 double[][] values = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
 Matrix matrix = new Matrix(values);
-'''
+```
 
 ### Operazioni tra matrici
 
@@ -37,7 +37,7 @@ Per eseguire un'operazione tra matrici, è possibile utilizzare i metodi della c
 Matrix matrixA = new Matrix(2, 2);
 Matrix matrixB = new Matrix(2, 2);
 Matrix sum = matrixA.add(matrixB);
-'''
+```
 
 ### Trasposizione di una matrice
 
@@ -46,7 +46,7 @@ Per ottenere la trasposta di una matrice, è possibile utilizzare il metodo `tra
 ```java
 Matrix matrix = new Matrix(2, 3);
 Matrix transpose = matrix.transpose();
-'''
+```
 
 ### Calcolo del determinante
 
@@ -56,7 +56,7 @@ Per calcolare il determinante di una matrice quadrata, è possibile utilizzare i
 double[][] values = {{1, 2}, {3, 4}};
 Matrix matrix = new Matrix(values);
 double determinant = matrix.determinant();
-'''
+```
 
 ### Risoluzione di un sistema di equazioni lineari
 
@@ -68,7 +68,7 @@ double[] constants = {4, 3};
 Matrix matrix = new Matrix(coefficients);
 Matrix constantsMatrix = new Matrix(constants, 2);
 Matrix solution = matrix.solve(constantsMatrix);
-'''
+```
 
 ## Contribuire
 
