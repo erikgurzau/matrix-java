@@ -58,6 +58,15 @@ Matrix matrix = new Matrix(values);
 double determinant = matrix.determinant();
 ```
 
+### 
+Per ridurre a scala una matrice attraverso l'utilizzo del metodo di Eliminazione di Gauss, è possibile utilizzare il metodo `scale`:
+
+```java
+double[][] values = {{1, 2}, {3, 4}};
+Matrix matrix = new Matrix(values);
+Matrix matrixScalex = matrix.scale(matrix);
+```
+
 ### Risoluzione di un sistema di equazioni lineari
 
 Per risolvere un sistema di equazioni lineari rappresentato come una matrice, è possibile utilizzare il metodo `solve`:
