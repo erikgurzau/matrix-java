@@ -2,7 +2,7 @@
 
 `matrix-java` is a Java library for manipulating matrices.
 
-## Features
+## Summary
 
 The library offers the following features:
 
@@ -12,7 +12,7 @@ The library offers the following features:
 - Calculating the determinant of square matrices
 - Solving systems of linear equations represented as matrices
 
-## Utilisation
+## Features
 
 ### Creating a matrix
 
