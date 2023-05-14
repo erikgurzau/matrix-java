@@ -1,37 +1,37 @@
 # Matrix Java
 
-`matrix-java` è una libreria Java per la manipolazione di matrici.
+`matrix-java` is a Java library for manipulating matrices.
 
-## Caratteristiche
+## Features
 
-La libreria offre le seguenti funzionalità:
+The library offers the following features:
 
-- Creazione di matrici vuote o inizializzate con valori predefiniti
-- Operazioni matematiche tra matrici, come l'addizione e la moltiplicazione
-- Trasposizione di matrici
-- Calcolo del determinante di matrici quadrate
-- Risoluzione di sistemi di equazioni lineari rappresentati come matrici
+- Creation of empty or initialised matrices with predefined values
+- Mathematical operations between matrices, such as addition and multiplication
+- Transposition of matrices
+- Calculating the determinant of square matrices
+- Solving systems of linear equations represented as matrices
 
-## Utilizzo
+## Utilisation
 
-### Creazione di una matrice
+### Creating a matrix
 
-Per creare una matrice, è possibile utilizzare il costruttore `Matrix` e passare le dimensioni della matrice come parametri:
+To create a matrix, you can use the `Matrix` constructor and pass the dimensions of the matrix as parameters:
 
 ```java
 Matrix matrix = new Matrix(3, 3);
 ```
 
-È anche possibile inizializzare una matrice con valori predefiniti utilizzando il costruttore `Matrix` che accetta un array bidimensionale:
+You can also initialise a matrix with predefined values using the `Matrix` constructor, which accepts a two-dimensional array:
 
 ```java
 double[][] values = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
 Matrix matrix = new Matrix(values);
 ```
 
-### Operazioni tra matrici
+### Operations between matrices
 
-Per eseguire un'operazione tra matrici, è possibile utilizzare i metodi della classe `Matrix`. Ad esempio, per sommare due matrici:
+To perform an operation between matrices, you can use the methods of the `Matrix` class. For example, to sum two matrices:
 
 ```java
 Matrix matrixA = new Matrix(2, 2);
@@ -39,18 +39,18 @@ Matrix matrixB = new Matrix(2, 2);
 Matrix sum = matrixA.add(matrixB);
 ```
 
-### Trasposizione di una matrice
+### Transposing a matrix
 
-Per ottenere la trasposta di una matrice, è possibile utilizzare il metodo `transpose`:
+To obtain the transpose of a matrix, you can use the `transpose` method:
 
 ```java
 Matrix matrix = new Matrix(2, 3);
 Matrix transpose = matrix.transpose();
 ```
 
-### Calcolo del determinante
+### Calculating the determinant
 
-Per calcolare il determinante di una matrice quadrata, è possibile utilizzare il metodo `determinant`:
+To calculate the determinant of a square matrix, you can use the `determinant` method:
 
 ```java
 double[][] values = {{1, 2}, {3, 4}};
@@ -58,8 +58,8 @@ Matrix matrix = new Matrix(values);
 double determinant = matrix.determinant();
 ```
 
-### Riduzione a scala
-Per ridurre a scala una matrice attraverso l'utilizzo del metodo di Eliminazione di Gauss, è possibile utilizzare il metodo `scale`:
+### Scaling
+To reduce a matrix to scale using the Gauss elimination method, the `scale` method can be used:
 
 ```java
 double[][] values = {{1, 2}, {3, 4}};
@@ -67,9 +67,9 @@ Matrix matrix = new Matrix(values);
 Matrix matrixScalex = matrix.scale(matrix);
 ```
 
-### Risoluzione di un sistema di equazioni lineari
+### Solving a system of linear equations
 
-Per risolvere un sistema di equazioni lineari rappresentato come una matrice, è possibile utilizzare il metodo `solve`:
+To solve a system of linear equations represented as a matrix, you can use the ``solve`` method:
 
 ```java
 double[][] coefficients = {{2, 1}, {1, 1}};
@@ -79,33 +79,31 @@ Matrix constantsMatrix = new Matrix(constants, 2);
 Matrix solution = matrix.solve(constantsMatrix);
 ```
 
-## Contribuire
+## Contribute
 
-Ogni contributi sotto forma di segnalazione di bug, correzione di bug, miglioramenti della documentazione o suggerimenti per nuove features sono ben accetti.
+Any contributions in the form of bug reports, bug fixes, documentation improvements or suggestions for new features are welcome.
 
-### Come fare?
+### How?
 
-Questo repository è aperto alle contribuzioni degli sviluppatori esterni. Se sei interessato a contribuire al progetto, segui le istruzioni riportate di seguito:
+This repository is open for contributions from external developers. If you are interested in contributing to the project, please follow the instructions below:
 
-1. Forka il repository: Per contribuire a un repository GitHub, devi prima creare una copia del repository originale sul tuo account GitHub personale. Puoi fare ciò utilizzando il pulsante "Fork" presente nella pagina del repository.
+1. Fork the repository: To contribute to a GitHub repository, you must first create a copy of the original repository on your personal GitHub account. You can do this by using the 'Fork' button on the repository page.
 
-2. Clona il repository: Dopo aver effettuato il fork del repository, devi clonare la tua copia del repository sul tuo computer. Puoi farlo utilizzando il comando `git clone` e l'URL del repository che hai appena creato.
+2. Clone the repository: After you fork the repository, you need to clone your copy of the repository on your computer. You can do this using the `git clone` command and the URL of the repository you just created.
 
-3. Crea un nuovo branch: Prima di apportare modifiche al codice, è importante creare un nuovo branch per le tue modifiche. In questo modo, potrai lavorare sulle tue modifiche senza intaccare il codice originale. Puoi creare un nuovo branch utilizzando il comando `git checkout -b nome_del_nuovo_branch`.
+3. Create a new branch: Before making changes to your code, it is important to create a new branch for your changes. This way, you can work on your changes without affecting the original code. You can create a new branch using the command `git checkout -b new_branch_name`.
 
-4. Effettua le modifiche: Ora puoi apportare le modifiche al codice. Assicurati di seguire le linee guida del repository, inclusi i formati dei file, le convenzioni di denominazione, le regole di stile e le linee guida generali del progetto.
+4. Make changes: You can now make changes to the code. Make sure you follow the guidelines of the repository, including file formats, naming conventions, style rules and general project guidelines.
 
-5. Fai il commit delle modifiche: Dopo aver apportato le modifiche al codice, è importante effettuare il commit delle modifiche al branch corrente. Puoi farlo utilizzando il comando `git add .` per aggiungere tutti i file modificati e il comando `git commit -m "messaggio del commit"` per effettuare il commit delle modifiche.
+5. Commit changes: After making changes to the code, it is important to commit the changes to the current branch. You can do this by using the command `git add .` to add all the changed files and the command `git commit -m "commit message"` to commit the changes.
 
-6. Pusha il branch modificato: Dopo aver effettuato il commit delle modifiche, puoi pushare il branch modificato sul tuo repository GitHub. Puoi farlo utilizzando il comando `git push origin nome_del_nuovo_branch`.
+6. Pusha the modified branch: After committing the changes, you can push the modified branch to your GitHub repository. You can do this by using the command `git push origin_name_of_the_new_branch`.
 
-7. Crea una pull request: Dopo aver pushato il branch modificato sul tuo repository GitHub, puoi creare una pull request per richiedere l'integrazione delle tue modifiche nel repository originale. Puoi farlo utilizzando il pulsante "Create Pull Request" nella pagina del repository.
+7. Create a pull request: After pushing the modified branch to your GitHub repository, you can create a pull request to request the integration of your changes into the original repository. You can do this by using the 'Create Pull Request' button on the repository page.
 
-8. Attendi il feedback: Dopo aver creato la pull request, gli amministratori del repository originale valuteranno le tue modifiche e potranno richiedere eventuali modifiche o chiarimenti. Assicurati di monitorare la tua pull request e di rispondere prontamente alle eventuali richieste.
-
-
-## Licenza
-
-`matrix-java` è rilasciato sotto la licenza MIT. Leggere il file LICENSE per maggiori informazioni.
+8. Wait for feedback: After you have created the pull request, the administrators of the original repository will evaluate your changes and may request changes or clarifications. Be sure to monitor your pull request and respond promptly to any requests.
 
 
+## Licence
+
+`matrix-java` is released under the MIT licence. Please read the LICENSE file for more information.
